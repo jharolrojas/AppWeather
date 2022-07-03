@@ -1,0 +1,70 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+.container {
+  width: 100vw;
+  height: 100%;
+
+  font-family: "Dosis", sans-serif;
+  font-size: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+}
+
+.hotBackground {
+  background: linear-gradient(to bottom, #fd7e14, #feb272);
+}
+.froshBackground {
+  background: linear-gradient(to bottom, #0299df, #03a8f4d2);
+}
+.weatherCard {
+  width: 350px;
+  height: 550px;
+
+  margin: 20px;
+  text-align: center;
+
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.356);
+}
+button {
+  min-width: 80px;
+
+  margin: 20px;
+  padding: 10px;
+
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(159, 229, 159, 0.564);
+}
+
+i {
+  font-size: 2rem;
+}
+.descriptionSecond {
+  display: flex;
+  justify-content: space-evenly;
+  min-height: 75px;
+}
+.elementDescriptionSecond {
+  min-width: 70px;
+  margin: 10px 0;
+
+  display: flex;
+  flex-direction: column;  
+}
+h1 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
+img {
+  margin: 0%;
+}
+h2,
+h3 {
+  margin: 0;
+}
