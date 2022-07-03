@@ -1,27 +1,19 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState } from "react";
 import useGetData from "../hooks custom/useGetData";
+import useGetHttp from "../hooks custom/useGetHttp";
 
 const Weather = () => {
-  const [ubication, setUbication] = useState({});
   const [change, setChange] = useState(true);
   const { dateDay, hour } = useGetData();
-  let color = "froshBackground";
-
-  useEffect(() => {
-    const success = (pos) => {
-      axios
-        .get(
-          `https://api.openweathermap.org/data/2.5/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&appid=1c01f07c895cff6eb7e70ef612699848`
-        )
-        .then((res) => setUbication(res.data));
-    };
-    navigator.geolocation.getCurrentPosition(success);
-  }, []);
+  const { ubication } = useGetHttp();
+  let colorBackground = "";
+//cambiar el fondo dependiendo si la temperatura es alta o baja
+ if (Math.round(ubication.main?.temp - 273.15) < 18) colorBackground = "froshBackground";
+ else  colorBackground = "hotBackground";
 
   return (
-    <div className={`container ${color}`}>
+    <div className={`container ${colorBackground}`}>
       <div className="weatherCard">
         <div className="descriptionPrimary">
           <h1>Weather App</h1>
