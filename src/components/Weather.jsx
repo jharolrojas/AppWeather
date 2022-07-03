@@ -57,7 +57,7 @@ const Weather = () => {
             <b> {`${ubication.main?.humidity} %`}</b>
           </div>
         </div>
-        <button onClick={() => setChange(!change)}>C/F</button>
+        <button onClick={() => setChange(!change)}><b>C/F</b></button>
       </div>
     </div>
   );
