@@ -36,8 +36,8 @@ const Weather = () => {
             <i className="fas fa-thermometer-half"></i>
             <b>
               {change
-                ? `${Math.round(ubication.main?.temp - 273.15)} C°`
-                : `${Math.round(((ubication.main?.temp - 273.15) * 9/5) + 32)} F`} 
+                ? `${Math.round(ubication.main?.temp - 273.15)} °C`
+                : `${Math.round(((ubication.main?.temp - 273.15) * 9/5) + 32)} °F`} 
             </b>
           </div>
           <div className="elementDescriptionSecond">
